@@ -15,7 +15,7 @@
 #include <exception>
 
 #include "essentials/compatibility/compatibility.hpp"
-#include "essentials/sxprintf.hpp"
+#include "sxprintf.hpp"
 
 
 #ifndef SX_CPP03_BOOST

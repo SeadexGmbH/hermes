@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="license">
-      <UniqueIdentifier>{d2e47838-b932-42ce-a439-fff0ae19104b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\essentials">
       <UniqueIdentifier>{9d2d7a3f-d093-4e97-a398-aa6f57a6aeb2}</UniqueIdentifier>
     </Filter>
@@ -25,20 +22,15 @@
     <Filter Include="Source Files\essentials">
       <UniqueIdentifier>{09c52a5c-fb42-4d00-9b43-e778d04d5858}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\license\Lizenz_und_Nutzungsbedingungen_geschaeftliche_Nutzung_Fassung_20170309.pdf">
-      <Filter>license</Filter>
-    </None>
-    <None Include="..\..\license\Lizenz_und_Nutzungsbedingungen_geschaeftliche_Nutzung_Fassung_20170309_en.pdf">
-      <Filter>license</Filter>
-    </None>
-    <None Include="..\..\license\Lizenz_und_Nutzungsbedingungen_private_und wissenschaftliche_Nutzung_Fassung_20170309.pdf">
-      <Filter>license</Filter>
-    </None>
-    <None Include="..\..\license\Lizenz_und_Nutzungsbedingungen_private_und wissenschaftliche_Nutzung_Fassung_20170309_en.pdf">
-      <Filter>license</Filter>
-    </None>
+    <Filter Include="licenses">
+      <UniqueIdentifier>{d2e47838-b932-42ce-a439-fff0ae19104b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="licenses\essentials">
+      <UniqueIdentifier>{88029a12-77bf-4319-b66b-7b2ea7146c53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="licenses\hermes">
+      <UniqueIdentifier>{31402a15-9737-4135-87ad-db03f0f6d7a2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\color_mapping.cpp">
@@ -74,17 +66,20 @@
     <ClCompile Include="source\waiter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\version.cpp">
+    <ClCompile Include="..\externals\essentials\source\conversion.cpp">
+      <Filter>Source Files\essentials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\externals\essentials\source\essentials_version.cpp">
+      <Filter>Source Files\essentials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\externals\essentials\source\format_settings.cpp">
+      <Filter>Source Files\essentials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\externals\essentials\source\sxprintf.cpp">
+      <Filter>Source Files\essentials</Filter>
+    </ClCompile>
+    <ClCompile Include="source\hermes_version.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\essentials\source\conversion.cpp">
-      <Filter>Source Files\essentials</Filter>
-    </ClCompile>
-    <ClCompile Include="..\essentials\source\format_settings.cpp">
-      <Filter>Source Files\essentials</Filter>
-    </ClCompile>
-    <ClCompile Include="..\essentials\source\sxprintf.cpp">
-      <Filter>Source Files\essentials</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -145,44 +140,82 @@
     <ClInclude Include="include\hermes\std_timestamp_policy.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\hermes\version.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\hermes\waiter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\essentials\include\essentials\base.hpp">
-      <Filter>Header Files\essentials</Filter>
-    </ClInclude>
-    <ClInclude Include="..\essentials\include\essentials\conversion.hpp">
-      <Filter>Header Files\essentials</Filter>
-    </ClInclude>
-    <ClInclude Include="..\essentials\include\essentials\exception.hpp">
-      <Filter>Header Files\essentials</Filter>
-    </ClInclude>
-    <ClInclude Include="..\essentials\include\essentials\exception_template.hpp">
-      <Filter>Header Files\essentials</Filter>
-    </ClInclude>
-    <ClInclude Include="..\essentials\include\essentials\format_settings.hpp">
-      <Filter>Header Files\essentials</Filter>
-    </ClInclude>
-    <ClInclude Include="..\essentials\include\essentials\macro_helpers.hpp">
-      <Filter>Header Files\essentials</Filter>
-    </ClInclude>
-    <ClInclude Include="..\essentials\include\essentials\non_copyable.hpp">
-      <Filter>Header Files\essentials</Filter>
-    </ClInclude>
-    <ClInclude Include="..\essentials\include\essentials\sxprintf.hpp">
-      <Filter>Header Files\essentials</Filter>
-    </ClInclude>
-    <ClInclude Include="..\essentials\include\essentials\compatibility\chrono.hpp">
+    <ClInclude Include="..\externals\essentials\include\essentials\compatibility\chrono.hpp">
       <Filter>Header Files\essentials\compatibility</Filter>
     </ClInclude>
-    <ClInclude Include="..\essentials\include\essentials\compatibility\compatibility.hpp">
+    <ClInclude Include="..\externals\essentials\include\essentials\compatibility\compatibility.hpp">
       <Filter>Header Files\essentials\compatibility</Filter>
     </ClInclude>
-    <ClInclude Include="..\essentials\include\essentials\compatibility\thread.hpp">
+    <ClInclude Include="..\externals\essentials\include\essentials\compatibility\thread.hpp">
       <Filter>Header Files\essentials\compatibility</Filter>
     </ClInclude>
+    <ClInclude Include="..\externals\essentials\include\essentials\base.hpp">
+      <Filter>Header Files\essentials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externals\essentials\include\essentials\build_number.hpp">
+      <Filter>Header Files\essentials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externals\essentials\include\essentials\conversion.hpp">
+      <Filter>Header Files\essentials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externals\essentials\include\essentials\essentials_version.hpp">
+      <Filter>Header Files\essentials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externals\essentials\include\essentials\exception.hpp">
+      <Filter>Header Files\essentials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externals\essentials\include\essentials\exception_template.hpp">
+      <Filter>Header Files\essentials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externals\essentials\include\essentials\format_settings.hpp">
+      <Filter>Header Files\essentials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externals\essentials\include\essentials\macro_helpers.hpp">
+      <Filter>Header Files\essentials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externals\essentials\include\essentials\non_copyable.hpp">
+      <Filter>Header Files\essentials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externals\essentials\include\essentials\sxprintf.hpp">
+      <Filter>Header Files\essentials</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hermes\hermes_version.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\externals\essentials\license\essentials_Anhang_Appendix_20170406.pdf">
+      <Filter>licenses\essentials</Filter>
+    </None>
+    <None Include="..\externals\essentials\license\essentials_Lizenz_und_Nutzungsbedingungen_geschaeftliche_Nutzung_Fassung_20170406.pdf">
+      <Filter>licenses\essentials</Filter>
+    </None>
+    <None Include="..\externals\essentials\license\essentials_Lizenz_und_Nutzungsbedingungen_geschaeftliche_Nutzung_Fassung_20170406_en.pdf">
+      <Filter>licenses\essentials</Filter>
+    </None>
+    <None Include="..\externals\essentials\license\essentials_Lizenz_und_Nutzungsbedingungen_private_und wissenschaftliche_Nutzung_Fassung_20170406.pdf">
+      <Filter>licenses\essentials</Filter>
+    </None>
+    <None Include="..\externals\essentials\license\essentials_Lizenz_und_Nutzungsbedingungen_private_und wissenschaftliche_Nutzung_Fassung_20170406_en.pdf">
+      <Filter>licenses\essentials</Filter>
+    </None>
+    <None Include="..\..\license\hermes_Anhang_Appendix_20170406.pdf">
+      <Filter>licenses\hermes</Filter>
+    </None>
+    <None Include="..\..\license\hermes_Lizenz_und_Nutzungsbedingungen_geschaeftliche_Nutzung_Fassung_20170406.pdf">
+      <Filter>licenses\hermes</Filter>
+    </None>
+    <None Include="..\..\license\hermes_Lizenz_und_Nutzungsbedingungen_geschaeftliche_Nutzung_Fassung_20170406_en.pdf">
+      <Filter>licenses\hermes</Filter>
+    </None>
+    <None Include="..\..\license\hermes_Lizenz_und_Nutzungsbedingungen_private_und wissenschaftliche_Nutzung_Fassung_20170406.pdf">
+      <Filter>licenses\hermes</Filter>
+    </None>
+    <None Include="..\..\license\hermes_Lizenz_und_Nutzungsbedingungen_private_und wissenschaftliche_Nutzung_Fassung_20170406_en.pdf">
+      <Filter>licenses\hermes</Filter>
+    </None>
   </ItemGroup>
 </Project>

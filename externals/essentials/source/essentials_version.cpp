@@ -7,36 +7,68 @@
 //                                                                                                  //
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+#include "essentials/essentials_version.hpp"
 
-#ifndef CONVERSION_99CAC61B_DD8A_43E2_8612_0F42873A5741
-#define CONVERSION_99CAC61B_DD8A_43E2_8612_0F42873A5741
-
+#include <iostream>
 
 #include "essentials/compatibility/compatibility.hpp"
+#include "essentials/build_number.hpp"
+#include "essentials/sxprintf.hpp"
 
 
 namespace sxe
 {
 
 
-//!\brief Converts a number from string to int.
-//!\param _int_as_string Number in string format.
-//!\param _result Variable where the result will be stored.
-//!\return True on success, false otherwise.
-bool string_to_int(	const char* const _int_as_string, int& _result );
+namespace version
+{
 
-//!\brief Converts a number from unsigned int 32 to string.
-//!\param _value Number to be converted.
-//!\return Number as string.
-std::string to_string( const sxe::uint32_t _value );
 
-//!\brief Converts a number from int to string.
-//!\param _value Number to be converted.
-//!\return Number as string.
-std::string to_string( const int _value );
+namespace
+{
+
+
+const sxe::uint16_t VERSION_MAJOR( 1 );
+const sxe::uint16_t VERSION_MINOR( 0 );
+const sxe::uint16_t VERSION_PATCH( 1 );
 
 
 }
 
 
-#endif
+// cppcheck-suppress unusedFunction
+void log_version()
+{
+	std::cout << sxe::sxprintf( "essentials library version %.%.%.%.", get_major_version(),
+		get_minor_version(), get_patch_version(), get_build_number() ) << std::endl;
+}
+
+
+sxe::uint16_t get_major_version()
+{
+	return( VERSION_MAJOR );
+}
+
+
+sxe::uint16_t get_minor_version()
+{
+	return( VERSION_MINOR );
+}
+
+
+sxe::uint16_t get_patch_version()
+{
+	return( VERSION_PATCH );
+}
+
+
+sxe::uint16_t get_build_number()
+{
+	return( BUILD_NUMBER );
+}
+
+
+}
+
+
+}

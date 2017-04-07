@@ -100,6 +100,7 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\build\hermes.props" />
+    <Import Project="..\build\use_essentials.props" />
     <Import Project="..\build\debug_info.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug - C++ 03|Win32'" Label="PropertySheets">
@@ -107,19 +108,23 @@
     <Import Project="..\build\hermes.props" />
     <Import Project="..\build\c++03.props" />
     <Import Project="..\build\debug_info.props" />
+    <Import Project="..\build\use_essentials.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\build\hermes.props" />
+    <Import Project="..\build\use_essentials.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release - C++ 03|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\build\hermes.props" />
     <Import Project="..\build\c++03.props" />
+    <Import Project="..\build\use_essentials.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\build\hermes.props" />
+    <Import Project="..\build\use_essentials.props" />
     <Import Project="..\build\debug_info.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug - C++ 03|x64'" Label="PropertySheets">
@@ -127,21 +132,23 @@
     <Import Project="..\build\hermes.props" />
     <Import Project="..\build\c++03.props" />
     <Import Project="..\build\debug_info.props" />
+    <Import Project="..\build\use_essentials.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\build\hermes.props" />
+    <Import Project="..\build\use_essentials.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release - C++ 03|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\build\hermes.props" />
     <Import Project="..\build\c++03.props" />
+    <Import Project="..\build\use_essentials.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
@@ -151,7 +158,6 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug - C++ 03|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
@@ -161,7 +167,6 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
@@ -171,7 +176,6 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug - C++ 03|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
@@ -181,7 +185,6 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -195,7 +198,6 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release - C++ 03|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -209,7 +211,6 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -224,7 +225,6 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release - C++ 03|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -237,15 +237,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="..\..\license\Lizenz_und_Nutzungsbedingungen_geschaeftliche_Nutzung_Fassung_20170309.pdf" />
-    <None Include="..\..\license\Lizenz_und_Nutzungsbedingungen_geschaeftliche_Nutzung_Fassung_20170309_en.pdf" />
-    <None Include="..\..\license\Lizenz_und_Nutzungsbedingungen_private_und wissenschaftliche_Nutzung_Fassung_20170309.pdf" />
-    <None Include="..\..\license\Lizenz_und_Nutzungsbedingungen_private_und wissenschaftliche_Nutzung_Fassung_20170309_en.pdf" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\essentials\source\conversion.cpp" />
-    <ClCompile Include="..\essentials\source\format_settings.cpp" />
-    <ClCompile Include="..\essentials\source\sxprintf.cpp" />
+    <ClCompile Include="..\externals\essentials\source\conversion.cpp" />
+    <ClCompile Include="..\externals\essentials\source\essentials_version.cpp" />
+    <ClCompile Include="..\externals\essentials\source\format_settings.cpp" />
+    <ClCompile Include="..\externals\essentials\source\sxprintf.cpp" />
     <ClCompile Include="source\color_mapping.cpp" />
     <ClCompile Include="source\cout_logger.cpp" />
     <ClCompile Include="source\file_logger.cpp" />
@@ -256,24 +251,26 @@
     <ClCompile Include="source\log_level.cpp" />
     <ClCompile Include="source\log_message.cpp" />
     <ClCompile Include="source\std_timestamp_policy.cpp" />
-    <ClCompile Include="source\version.cpp" />
+    <ClCompile Include="source\hermes_version.cpp" />
     <ClCompile Include="source\waiter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\changelog.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\essentials\include\essentials\base.hpp" />
-    <ClInclude Include="..\essentials\include\essentials\compatibility\chrono.hpp" />
-    <ClInclude Include="..\essentials\include\essentials\compatibility\compatibility.hpp" />
-    <ClInclude Include="..\essentials\include\essentials\compatibility\thread.hpp" />
-    <ClInclude Include="..\essentials\include\essentials\conversion.hpp" />
-    <ClInclude Include="..\essentials\include\essentials\exception.hpp" />
-    <ClInclude Include="..\essentials\include\essentials\exception_template.hpp" />
-    <ClInclude Include="..\essentials\include\essentials\format_settings.hpp" />
-    <ClInclude Include="..\essentials\include\essentials\macro_helpers.hpp" />
-    <ClInclude Include="..\essentials\include\essentials\non_copyable.hpp" />
-    <ClInclude Include="..\essentials\include\essentials\sxprintf.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\base.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\build_number.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\compatibility\chrono.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\compatibility\compatibility.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\compatibility\thread.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\conversion.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\essentials_version.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\exception.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\exception_template.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\format_settings.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\macro_helpers.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\non_copyable.hpp" />
+    <ClInclude Include="..\externals\essentials\include\essentials\sxprintf.hpp" />
     <ClInclude Include="include\hermes\build_number.hpp" />
     <ClInclude Include="include\hermes\color.hpp" />
     <ClInclude Include="include\hermes\color_mapping.hpp" />
@@ -292,8 +289,20 @@
     <ClInclude Include="include\hermes\log_manager_template.hpp" />
     <ClInclude Include="include\hermes\log_message.hpp" />
     <ClInclude Include="include\hermes\std_timestamp_policy.hpp" />
-    <ClInclude Include="include\hermes\version.hpp" />
+    <ClInclude Include="include\hermes\hermes_version.hpp" />
     <ClInclude Include="include\hermes\waiter.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\license\hermes_Anhang_Appendix_20170406.pdf" />
+    <None Include="..\..\license\hermes_Lizenz_und_Nutzungsbedingungen_geschaeftliche_Nutzung_Fassung_20170406.pdf" />
+    <None Include="..\..\license\hermes_Lizenz_und_Nutzungsbedingungen_geschaeftliche_Nutzung_Fassung_20170406_en.pdf" />
+    <None Include="..\..\license\hermes_Lizenz_und_Nutzungsbedingungen_private_und wissenschaftliche_Nutzung_Fassung_20170406.pdf" />
+    <None Include="..\..\license\hermes_Lizenz_und_Nutzungsbedingungen_private_und wissenschaftliche_Nutzung_Fassung_20170406_en.pdf" />
+    <None Include="..\externals\essentials\license\essentials_Anhang_Appendix_20170406.pdf" />
+    <None Include="..\externals\essentials\license\essentials_Lizenz_und_Nutzungsbedingungen_geschaeftliche_Nutzung_Fassung_20170406.pdf" />
+    <None Include="..\externals\essentials\license\essentials_Lizenz_und_Nutzungsbedingungen_geschaeftliche_Nutzung_Fassung_20170406_en.pdf" />
+    <None Include="..\externals\essentials\license\essentials_Lizenz_und_Nutzungsbedingungen_private_und wissenschaftliche_Nutzung_Fassung_20170406.pdf" />
+    <None Include="..\externals\essentials\license\essentials_Lizenz_und_Nutzungsbedingungen_private_und wissenschaftliche_Nutzung_Fassung_20170406_en.pdf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

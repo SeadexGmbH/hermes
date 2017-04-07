@@ -10,7 +10,7 @@
 
 #include <iostream>
 
-#include "version.hpp"
+#include "hermes_version.hpp"
 #include "build_number.hpp"
 #include "essentials/compatibility/compatibility.hpp"
 #include "essentials/sxprintf.hpp"
@@ -30,7 +30,7 @@ namespace
 
 const sxe::uint16_t VERSION_MAJOR( 1 );
 const sxe::uint16_t VERSION_MINOR( 0 );
-const sxe::uint16_t VERSION_PATCH( 0 );
+const sxe::uint16_t VERSION_PATCH( 1 );
 
 
 }

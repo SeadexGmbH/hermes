@@ -4,7 +4,7 @@ project(hermes)
 
 set(CMAKE_VERBOSE_MAKEFILE, 1)
 
-file(GLOB hermes_SRC "./include/hermes/*.hpp" "./source/*.cpp" "./../essentials/include")
+file(GLOB hermes_SRC "./include/hermes/*.hpp" "./source/*.cpp" "./../externals/essentials/source/*.cpp" "./../externals/essentials/include/*.hpp" "./../externals/essentials/include/compatibility/*.hpp")
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
@@ -88,7 +88,7 @@ elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
 endif()
 
 include_directories("./include/hermes")
-include_directories("./../essentials/include")
+include_directories("./../externals/essentials/include")
 
 # for release
 if( "${CMAKE_BUILD_TYPE}" STREQUAL "Release" )	
