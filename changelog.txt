@@ -4,3 +4,9 @@ All notable changes to this project are documented in this file.
 ##[1.0.0] - 2017-04-03
 
 • The very first released version of hermes
+
+
+##[1.0.1] - 2017-04-07
+
+###Changed
+• 3rd party component 'essentials' was moved inside 'externals' folder.

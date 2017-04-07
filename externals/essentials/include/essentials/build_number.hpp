@@ -1,21 +1,21 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                  //
-// This file is part of the Seadex hermes library (http://hermes.seadex.de).                        //
+// This file is part of the Seadex essentials library (http://essentials.seadex.de).                //
 // Copyright( C ) 2017 Seadex GmbH                                                                  //
 // Licensing information is available in the folder "license" which is part of this distribution.   //
-// The same information is available on the www @ http://hermes.seadex.de/License.html.             //
+// The same information is available on the www @ http://essentials.seadex.de/License.html.         //
 //                                                                                                  //
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-#ifndef BUILD_NUMBER_D6FF600D_5F67_43E8_A8CD_7BEE789F3AD4
-#define BUILD_NUMBER_D6FF600D_5F67_43E8_A8CD_7BEE789F3AD4
+#ifndef BUILD_NUMBER_0A2C7A7F_B3EC_443A_BDD8_652E7DEFC433
+#define BUILD_NUMBER_0A2C7A7F_B3EC_443A_BDD8_652E7DEFC433
 
 
-#include "essentials/compatibility/compatibility.hpp"
+#include "compatibility/compatibility.hpp"
 
 
-namespace hermes
+namespace sxe
 {
 
 
@@ -23,7 +23,7 @@ namespace version
 {
 
 
-	const sxe::uint16_t BUILD_NUMBER( 66 );
+	const sxe::uint16_t BUILD_NUMBER( 56 );
 
 
 }
