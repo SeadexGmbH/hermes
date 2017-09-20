@@ -16,9 +16,10 @@
 #include <iomanip>
 #include <cstdio>
 
+#include "essentials/conversion.hpp"
+
 #include "file_system.hpp"
 #include "globals.hpp"
-#include "essentials/conversion.hpp"
 #include "log_message.hpp"
 
 

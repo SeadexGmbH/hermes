@@ -8,20 +8,45 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-#ifndef EXCEPTION_B675DC28_13E9_4827_9916_4649C36BD407
-#define EXCEPTION_B675DC28_13E9_4827_9916_4649C36BD407
+#ifndef URI_72CBB6C3_57D9_443A_99F0_9EDE9A2BC07D
+#define URI_72CBB6C3_57D9_443A_99F0_9EDE9A2BC07D
 
 
-#include "exception_template.hpp"
+#include <deque>
+
+#include "compatibility/compatibility.hpp"
 
 
 namespace sxe
 {
 
 
-//!\def SX_EXCEPTION( exception )
-//!\brief The Seadex essentials exception class.
-SX_EXCEPTION( exception )
+const char URI_DELIMITER = '/';
+
+
+class uri SX_FINAL
+{
+public:
+	explicit uri( const std::string& _uri = "" );
+	~uri() SX_NOEXCEPT;
+	bool is_empty() const;
+	const std::string to_string() const;
+	const std::string& get_front() const;
+	const std::string& get_back();
+	void push_front( const std::string& _segment );
+	void push_back( const std::string& _segment );
+	void pop_front();
+	void pop_back();
+	size_t size() const;
+
+
+private:
+	const std::string build_uri() const;
+	void split_string_to_uri_segments( const std::string& _uri );
+
+
+	std::deque< std::string > uri_;
+};
 
 
 }

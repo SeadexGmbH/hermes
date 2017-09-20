@@ -81,6 +81,9 @@
     <ClCompile Include="source\hermes_version.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\externals\essentials\source\uri.cpp">
+      <Filter>Source Files\essentials</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\changelog.txt" />
@@ -184,6 +187,9 @@
     </ClInclude>
     <ClInclude Include="include\hermes\hermes_version.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\externals\essentials\include\essentials\uri.hpp">
+      <Filter>Header Files\essentials</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
