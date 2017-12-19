@@ -10,7 +10,7 @@
 #ifndef SX_NO_LOGGING
 
 
-#include "cout_logger.hpp"
+#include "hermes/cout_logger.hpp"
 
 #include <iostream>
 #include <iomanip>
@@ -18,7 +18,7 @@
 
 #include "essentials/conversion.hpp"
 
-#include "log_message.hpp"
+#include "hermes/log_message.hpp"
 
 
 #ifdef WIN32
@@ -35,7 +35,7 @@
 
 #endif
 
-#include "globals.hpp"
+#include "hermes/globals.hpp"
 
 
 namespace hermes
