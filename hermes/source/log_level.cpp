@@ -10,7 +10,7 @@
 #ifndef SX_NO_LOGGING
 
 
-#include "log_level.hpp"
+#include "hermes/log_level.hpp"
 
 #include "essentials/base.hpp"
 

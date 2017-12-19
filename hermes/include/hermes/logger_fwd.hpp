@@ -7,14 +7,17 @@
 //                                                                                                  //
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifndef SX_NO_LOGGING
-
 
 #ifndef LOGGER_FWD_9F0DC46E_91EC_44AB_ADE0_7F223D30DE83
 #define LOGGER_FWD_9F0DC46E_91EC_44AB_ADE0_7F223D30DE83
 
+#include "hermes_backward_compatibility.hpp"
 
-#include <vector>			
+
+#ifndef SX_NO_LOGGING
+
+
+#include <vector>
 
 #include "essentials/compatibility/compatibility.hpp"
 

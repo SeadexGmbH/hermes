@@ -9,7 +9,7 @@
 
 #ifdef SX_CPP03_BOOST
 
-#include "log_helper.hpp"
+#include "hermes/log_helper.hpp"
 
 #include "essentials/sxprintf.hpp"
 
